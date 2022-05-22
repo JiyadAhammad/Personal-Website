@@ -38,6 +38,9 @@ body a:focus, a:hover {
 .error-message span i{
     color: green;
 }
+.align-button span i{
+    color: green;
+}
 input[type="button"], input[type="submit"] {
 	transition: 0.5s all;
 	-webkit-transition: 0.5s all;
