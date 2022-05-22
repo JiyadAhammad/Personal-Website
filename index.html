@@ -588,7 +588,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				nameError.innerHTML = 'Exceeded maximum limit';
 				return false;
 			}
-			if (!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)) {
+			if (!name.match(/^[A-Za-z]*\s{1}[A-Za-z]+$/)) {
 				nameError.innerHTML = 'Write full name';
 				return false;
 			}
@@ -650,6 +650,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			if (!validateName() || !validateEmail() || !validateNumber() || !validateMessage()) {
 				formError.innerHTML = 'Please fix error to submit';
 				return false;
+			}else{
+				formError.innerHTML = '<span><i>Form Submitted</i> </span>';
+				return true;
 			}
 		}
 		
@@ -659,7 +662,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         $("#submit-form").submit((e)=>{
             e.preventDefault()
             $.ajax({
-                url:"https://script.google.com/macros/s/AKfycbzF6O16qHvBK0LONmBRmZMcCpCCj6OqGbZKfBqB/exec",
+                url:"https://script.google.com/macros/s/AKfycbw0Mynvs0Q6zpE4g4rMqDqAgSBJd7wF66aMzXyCeC17n7UyIzI/exec",
                 data:$("#submit-form").serialize(),
                 method:"post",
                 success:function (response){
