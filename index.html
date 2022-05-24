@@ -395,17 +395,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<form id="submit-form" action="">
 					<div class="col-md-7 col-sm-7 contact-left agileits-w3layouts">
 						<div class="error-message">
-							<input type="text" name="firstname" placeholder="Name" id="firstname"
-								onkeyup="validateName()">
+							<input type="text" name="firstname" placeholder="Name*" id="firstname" 
+								onkeyup="validateName()" required>
 							<span id="name-error"></span>
 						</div>
 						<div class="error-message">
-							<input type="email" class="email" name="Email" placeholder="Email" id="Email"
+							<input type="email" class="email" name="Email*" placeholder="Email" id="Email" required
 								onkeyup="validateEmail()">
 							<span id="email-error"></span>
 						</div>
 						<div class="error-message">
-							<input type="text" name="Number" placeholder="Mobile Number" id="Number"
+							<input type="text" name="Number" placeholder="Mobile Number*" id="Number"required
 								onkeyup="validateNumber()">
 							<span id="phone-error"></span>
 						</div>
@@ -413,7 +413,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div class="error-message">
 					<div class="col-md-5 col-sm-5 contact-right agileits-w3layouts">
 						<div class="error-message">
-							<textarea name="Message" placeholder="Message" id="Message"
+							<textarea name="Message" placeholder="Message*" id="Message" required
 								onkeyup="validateMessage()"></textarea>
 							<span id="message-error"></span>
 						</div>
@@ -592,7 +592,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				nameError.innerHTML = 'Write full name';
 				return false;
 			}
-			nameError.innerHTML = '<span><i>valid</i> </span>';
+			nameError.innerHTML = '<span></span>';
 			return true;
 		}
 		function validateEmail() {
@@ -605,7 +605,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				emailError.innerHTML = 'Email Invalid'
 				return false;
 			}
-			emailError.innerHTML = '<span><i>valid</i> </span>';
+			emailError.innerHTML = '<span></span>';
 			return true;
 		}
 
@@ -624,7 +624,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			if (!number.match(/^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/)) {
 				return false;
 			}
-			phoneError.innerHTML = '<span><i>valid</i> </span>';
+			phoneError.innerHTML = '<span> </span>';
 			return true;
 		}
 
@@ -642,13 +642,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				msgError.innerHTML = 'Give proper message'
 				return false;
 			}
-			msgError.innerHTML = '<span><i>valid</i> </span>';
+			msgError.innerHTML = '<span> </span>';
 			return true;
 		}
 
 		function validateForm() {
 			if (!validateName() || !validateEmail() || !validateNumber() || !validateMessage()) {
-				formError.innerHTML = 'Please fix error to submit';
+				formError.innerHTML = 'Fill all field';
 				return false;
 			}else{
 				formError.innerHTML = '<span><i>Form Submitted</i> </span>';
