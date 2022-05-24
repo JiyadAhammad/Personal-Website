@@ -400,7 +400,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<span id="name-error"></span>
 						</div>
 						<div class="error-message">
-							<input type="email" class="email" name="Email*" placeholder="Email" id="Email" required
+							<input type="email" class="email" name="Email" placeholder="Email*" id="Email" required
 								onkeyup="validateEmail()">
 							<span id="email-error"></span>
 						</div>
@@ -648,7 +648,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 		function validateForm() {
 			if (!validateName() & !validateEmail() & !validateNumber() & !validateMessage()) {
-				formError.innerHTML = 'Fill all field';
+				formError.innerHTML = '';
 				return false;
 			}else{
 				formError.innerHTML = '<span> </span>';
