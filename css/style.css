@@ -1598,8 +1598,8 @@ h4.modal-title {
 
 /* Project */
 .w3-project {
-    background: #eee;
-
+    background: url(../images/skill2.jpg) no-repeat 0px 0px;
+    background-size: cover;
 }
 
 /*-- //to-top --*/
@@ -1609,10 +1609,10 @@ h4.modal-title {
 @media(max-width:1366px) {}
 
 @media(max-width:1280px) {
-    .w3-banner-top {
-        background: url(../images/c2.jpg) no-repeat -194px 0px;
+    /* .w3-banner-top {
+        background: url(../images/skill2.jpg) no-repeat -194px 0px;
         background-size: cover;
-    }
+    } */
 }
 
 @media(max-width:1080px) {
@@ -2398,5 +2398,9 @@ h4.modal-title {
         top: 16px;
     }
 }
+
+/* .bgimg {
+    background-image: url('images/skill2.jpg');
+} */
 
 /*-- /responsive design --*/
